@@ -11,7 +11,6 @@ const SearchFunction = async (q) => {
                 resolve(data.results)
             })
             .catch((err) => {
-                console.log("Error: ", err)
                 reject([])
             })
     })

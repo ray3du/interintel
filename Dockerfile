@@ -4,6 +4,8 @@ LABEL authors="ray3du"
 
 # set work directory
 WORKDIR /app
+RUN mkdir /app/staticfiles
+RUN mkdir /app/mediafiles
 
 # set environment variables
 ENV PYTHONDONTWRITEBYTECODE 1

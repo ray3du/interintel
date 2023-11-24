@@ -148,7 +148,8 @@ node_modules/
 logs/
 
 # MEDIA
-media/
+mediafiles/
+staticfiles/
 
 node_modules
 scripts/flow/*/.flowconfig

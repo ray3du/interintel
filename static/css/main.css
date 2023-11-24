@@ -10,7 +10,9 @@
 #search_items {
     max-height: 400px;
     overflow-y: scroll;
-    min-width: 350px;
+    min-width: 600px;
+    max-width: 600px;
+    overflow-x: hidden;
 }
 
 

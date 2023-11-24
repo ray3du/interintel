@@ -6,12 +6,19 @@ services:
     command: uwsgi --http :9000 --module devproject.wsgi
     volumes:
       - .:/app
-    ports:
-      - "9000:9000"
+      - static_volume:/home/app/web/staticfiles
+      - media_volume:/home/app/web/mediafiles
+    expose:
+      - 9000
     env_file:
       - .env
     depends_on:
       - db
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:9000/"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
 
   db:
     image: postgres:15-alpine
@@ -22,6 +29,9 @@ services:
 
   nginx:
     build: ./nginx
+    volumes:
+      - static_volume:/home/app/staticfiles
+      - media_volume:/home/app/mediafiles
     ports:
       - "1337:80"
     depends_on:
@@ -29,3 +39,5 @@ services:
 
 volumes:
   postgres_data:
+  static_volume:
+  media_volume:
