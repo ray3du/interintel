@@ -1,0 +1,22 @@
+<nav class="navbar navbar-expand-lg bg-light">
+  <div class="container-fluid py-2 mx-4">
+    <a class="navbar-brand" href="{% url 'ecommerce:home' %}">InterIntel</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="{% url 'ecommerce:home' %}">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'ecommerce:products' %}">Products</a>
+        </li>
+      </ul>
+      <div class="dropdown">
+        <input class="form-control me-2" type="text" placeholder="Global Search .." aria-label="Search"  data-bs-toggle="dropdown" aria-expanded="false" id="search" name="search" autocomplete="off">
+        <ul class="dropdown-menu" id="search_items"></ul>
+        </div>
+    </div>
+  </div>
+</nav>
