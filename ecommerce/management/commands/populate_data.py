@@ -1,6 +1,4 @@
-import os
 from django.core.management.base import BaseCommand
-from devproject import settings
 from ecommerce.factories import CategoryFactory, ProductFactory
 
 
@@ -11,7 +9,7 @@ class Command(BaseCommand):
         for category in categories:
             products = ProductFactory.create_batch(6, category=category)
             for product in products:
-                product.image = os.path.join(settings.MEDIA_ROOT, "data/image.webp")
+                product.image = "image.webp"
                 product.save()
 
             self.stdout.write(
