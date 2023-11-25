@@ -16,6 +16,7 @@ python manage.py makemigrations --no-input
 python manage.py migrate
 python manage.py populate_data
 python manage.py collectstatic  --no-input
+python manage.py test
 
 
 exec "$@"

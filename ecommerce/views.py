@@ -55,7 +55,7 @@ class IndexView(TemplateView):
                         "description": product.description,
                         "category": {
                             "name": product.category.name
-                        }
+                        } if product.category is not None else {}
                     } for product in products]
                 }, safe=False)
 
