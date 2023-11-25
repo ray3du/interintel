@@ -10,7 +10,7 @@
 # SECTION B
 ## Question 2
 
-> This project is a small mimic of an ecommerce system where the user is able to view listed products. Each product has product page where the specific details of the product are listed
+> This project is a small mimic of an ecommerce system where the user is able to view listed products. Each product has product page where the specific details of the product are listed. The user is able to search for a specific item using the search input and view the response in a results page.
 > 
 
 ## Table of Contents
@@ -97,7 +97,7 @@ The search feature involves searching through a database for a record containing
              }
          }
       ```
-      The function above takes in a callback and a delay: The callback is the function that you want to delay its execution - in this case I passed the function that fetches the search.  
+      The function above takes in a callback and a delay: The callback is the function that you want to delay its execution - in this case I passed the function that fetches the search results from the server.  
       The debouncer maintains a timer variable which holds the setTimeout instance that is currently in the javascript event loop awaiting execution. This enables the debouncer to remove it from the event loop incase the debouncer is initialized again in this case when a user inserts an input in the search bar.
       The debouncer can be initialized as shown below
       ```javascript
